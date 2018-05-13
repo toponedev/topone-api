@@ -121,12 +121,12 @@ Response示例:
         "deal_money": "0",            #成交额
         "status": 1,                  #订单状态   0 进行中  1 完成  2 撤单
         "amount": "10000",            #下单量
-        "left": "10000",              #剩余量(未成交量)
+        "left": "10000",              #剩余量(未成交量)
         "deal_stock": "0"             #成交量
       }, 
       "id": 0
     }
-    
+
 4)市价单
 
 Post /
@@ -136,15 +136,15 @@ URL: https://trade.top.one/
 body: 
 
     {
-      "method":"order.market", 
-      "params":[
-        "token",      #Token
-        "TOP/ETH",    #市场
-        2,            #买卖 1 卖  2 买
-        "0.1",        #数量 买入：ETH数量  卖出：TOP数量
-        1             #是否使用top抵扣手续费 1是 0 否
-      ],
-      "id":0
+        "method":"order.market", 
+        "params":[
+            "token",      #Token
+            "TOP/ETH",    #市场
+            2,            #买卖 1 卖  2 买
+            "0.1",        #数量 买入：ETH数量  卖出：TOP数量
+            1             #是否使用top抵扣手续费 1是 0 否
+        ],
+        "id":0
     }
 
 Response示例:
@@ -191,7 +191,7 @@ Response示例:
             "price": "0.0000101", 
             "deal_money": "0", 
             "status": 3, 
-            "amount": "10000", 
+            "amount": "10000",
             "left": "10000", 
             "deal_stock": "0"
         }, 
@@ -211,14 +211,14 @@ body:
         "method":"order.history", 
         "params":[
             "token",        #Token
-            "TOP/ETH",      #市场
-            1526140800,     #开始时间
-            1526210312,     #结束时间
-            0,              #偏移
-            100],           #Limit数量
-        "id":0
+            "TOP/ETH",      #市场
+            1526140800,     #开始时间
+            1526210312,     #结束时间
+            0,              #偏移
+            100],           #Limit数量
+        "id":0
     }
-    
+
 Response示例:
 
     {
