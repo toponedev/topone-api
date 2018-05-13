@@ -224,18 +224,18 @@ Response示例:
     {
         "result": [
             {
-                "order_id": 26316,                  #订单ID
-                "status": 3,                        #订单状态   0 进行中  1 完成  2 撤单
-                "deal_money": "0",                  #成交金额
-                "create_time": 1526209523.637193,   #下单时间
-                "side": 2,                          #买卖 1 卖  2 买
-                "finish_time": 1526209523.637193,   #订单完成时间
-                "market": "TOP/ETH",                #市场
-                "t": 1,                             #订单类型   1 限价单  2 市价单
-                "price": "0.0000101",               #委托价格
-                "amount": "10000",                  #委托数量
-                "deal_stock": "0"},                 #成交数量
-            {
+                "order_id": 26316,                  #订单ID
+                "status": 3,                        #订单状态   0 进行中  1 完成  2 撤单
+                "deal_money": "0",                  #成交金额
+                "create_time": 1526209523.637193,   #下单时间
+                "side": 2,                          #买卖 1 卖  2 买
+                "finish_time": 1526209523.637193,   #订单完成时间
+                "market": "TOP/ETH",                #市场
+                "t": 1,                             #订单类型   1 限价单  2 市价单
+                "price": "0.0000101",               #委托价格
+                "amount": "10000",                  #委托数量
+                "deal_stock": "0"                   #成交数量
+            },{
                 "order_id": 26211, 
                 "status": 3, 
                 "deal_money": "0", 
@@ -246,7 +246,8 @@ Response示例:
                 "t": 1, 
                 "price": "0.00001057", 
                 "amount": "10000", 
-                "deal_stock": "0"}
+                "deal_stock": "0"
+            }
         ], 
         "error": null, 
         "id": 6
@@ -261,15 +262,15 @@ URL: https://trade.top.one/history/
 body: 
 
     {
-        "method":"deals.history", 
+        "method":"deals.history", 
         "params":[
             "token",        #Token
-            "TOP/ETH",      #市场
-            1526140800,     #开始时间
-            1526210312,     #结束时间
-            0,              #偏移
-            100],           #Limit数量
-        "id":0
+            "TOP/ETH",      #市场
+            1526140800,     #开始时间
+            1526210312,     #结束时间
+            0,              #偏移
+            100],           #Limit数量
+        "id":0
     }
 
 Response示例:
@@ -285,10 +286,9 @@ Response示例:
                 "amount": "16.00000000",        #成交数量
                 "deal": "0.0960000000000000",   #成交金额
                 "fee_asset": "TOP",             #手续费资产类型
-                "fee": "0E-16",                 #手续费
-            }
+                "fee": "0E-16",                 #手续费
+            }
         ], 
         "id": 0, 
         "error": null
     }
-    
