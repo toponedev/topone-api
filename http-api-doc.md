@@ -4,13 +4,13 @@ Official Documentation for the APIs
 
 TOP.ONE 交易接口说明
 
-请求交互
+# 请求交互
 
 REST访问的根URL：https://trade.top.one/
 
-API参考
+## API参考
 
-1)查询余额
+### 1)查询余额
 
 Post /
 
@@ -46,7 +46,7 @@ Response示例：
       "id": 0
     }
     
-2)当前委托
+### 2)当前委托
 
 Post /
 
@@ -85,7 +85,7 @@ Response示例：
       "id": 0
     }
 
-3)限价单
+### 3)限价单
 
 Post /
 
@@ -127,7 +127,7 @@ Response示例:
       "id": 0
     }
 
-4)市价单
+### 4)市价单
 
 Post /
 
@@ -168,7 +168,7 @@ Response示例:
         "id": 97
     }
 
-5)撤单
+### 5)撤单
 
 Post /
 
@@ -199,7 +199,7 @@ Response示例:
         "id": 0
     }
     
-6)历史委托
+### 6)历史委托
 
 Post /history/
 
@@ -253,7 +253,7 @@ Response示例:
         "id": 6
     }
 
-7)历史成交
+### 7)历史成交
 
 Post /history/
 
