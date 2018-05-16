@@ -91,4 +91,47 @@ TOP/ETH: 交易市场名称
         "method": "deals.update",
         "id": null
     }
- 
+    
+ ### 3)订阅订单状态更新
+请求数据格式为：  
+`{"method":"orders.subscribe","params":["token"],"id":0}`  
+
+推送订单数据示例： 
+
+      {
+            "params": [
+                  { "id": 26211,                  #订单ID
+                    "type": 1,                    #订单类型   1 限价单  2 市价单
+                    "market": "TOP/ETH",          #市场
+                    "side": 2,                    #买卖方向   1 卖  2 买
+                    "ctime": 1526205633.6342139,  #下单时间
+                    "mtime": 1526205633.6342139,  #更新时间
+                    "price": "0.00001057",        #下单价格
+                    "deal_money": "0",            #成交额
+                    "status": 1,                  #订单状态   0 进行中  1 完成  2 撤单
+                    "amount": "10000",            #下单量
+                    "left": "10000",              #剩余量
+                    "deal_stock": "0"             #成交量
+                    }
+            ], 
+            "method": "orders.update", 
+            "id": null
+      }
+
+
+ ### 4)订阅余额变更通知
+请求数据格式为：  
+`{"method":"balance.subscribe","params":["token"],"id":0}`  
+
+推送余额数据示例： 
+
+      {
+            "params": [
+                  {"available": "99999980.24173",   #可用余额
+                  "asset": "ETH",                   #资产类型
+                  "freeze": "23.596"}               #下单冻结
+            ], 
+            "method": "balance.update", 
+            "id": null
+      }
+
