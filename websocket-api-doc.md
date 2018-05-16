@@ -127,10 +127,10 @@ TOP/ETH: 交易市场名称
 
       {
             "params": [
-                  {"available": "99999980.24173",   #可用余额
-                  "asset": "ETH",                   #资产类型
-                  "freeze": "23.596"}               #下单冻结
-            ], 
+                    {"available": "99999980.24173",   #可用余额
+                    "asset": "ETH",                   #资产类型
+                    "freeze": "23.596"}               #下单冻结
+            ], 
             "method": "balance.update", 
             "id": null
       }
