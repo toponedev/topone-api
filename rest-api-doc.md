@@ -7,6 +7,7 @@ TOP.ONE 交易接口说明
 # 请求交互
 
 REST访问的根URL：https://trade.top.one/
+token:帐号授权字符串,请联系TOP.ONE，需要提供账户信息
 
 ## API参考
 
