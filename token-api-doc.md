@@ -1,6 +1,6 @@
 #### About Token
 * Token is used for order authentication.
-* The Token is valid for one hour, you should get a new one every hour.
+* **The Token is valid for several hours, you should get a new one every hour.**
 
 #### How To Get Token
 
