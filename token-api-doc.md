@@ -7,7 +7,8 @@
 * Login in [https://top.one](https://top.one),visit the user center page,ask for your AppId and AppKey by binding a specific IP address.
 * AppKey just show once,please keep it well preserved.
 * You can revise it again once AppKey lost.
-* The token API endpoint is: [https://server.top.one](https://server.top.one)
+* The token API endpoint is: [https://server.top.one](https://server.top.one).
+* The effective time of token is two hours.
 
 * GET /api/apiToken
 * Parameters:
