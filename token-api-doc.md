@@ -1,3 +1,7 @@
+#### About Token
+* Token is used for order authentication.
+* The Token is valid for one hour, you should get a new one every hour.
+
 #### How To Get Token
 
 * Login in [https://top.one](https://top.one),visit the user center page,ask for your AppId and AppKey by binding a specific IP address.
