@@ -1,8 +1,8 @@
-#### About Token
+### About Token
 * Token is used for order authentication.
 * **_The Token is valid for several hours, you should get a new one every hour._**
 
-#### How To Get Token
+### How To Get Token
 
 * Login in [https://top.one](https://top.one),visit the user center page,ask for your AppId and AppKey by binding a specific IP address.
 * AppKey just show once,please keep it well preserved.
@@ -10,7 +10,8 @@
 * The token API endpoint is: [https://server.top.one](https://server.top.one).
 * The effective time of token is two hours.
 
-* GET /api/apiToken
+#### GET /api/apiToken
+
 * Parameters:
 
 	| Name | Type | Description |
@@ -47,3 +48,20 @@
 	T0004 | Time is wrong.
 	T0005 | Sig is wrong.
 	T0006 | IP is not conforming to the agreement.
+	
+#### GET /api/time
+
+* Parameters:
+	none
+
+* Response:
+
+	``` json
+	{
+	    "status": 200,
+	    "error_code": 0,
+	    "data": {
+	        "time": 1529400060
+	    }
+	}
+	```
