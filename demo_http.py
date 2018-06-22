@@ -2,6 +2,7 @@
 
 import time
 import json
+import random
 import hashlib
 import requests
 
@@ -11,7 +12,7 @@ appkey = 'xxxxxxxxxxxxxxxxxxxxxxxxxx'
 headerdata = {"Content-type": "application/json"}
 
 #get token
-random = 123456
+random = random.randint(100000,999999)
 curtime = int(time.time())
 data = 'appkey='+appkey+'&random='+str(random)+'&time='+str(curtime)
 sha256 = hashlib.sha256()
@@ -53,8 +54,3 @@ print res.text
 body = {"method":"order.history", "params":[token, "TOP/ETH", 0, 0, 0, 100],"id":0}
 res=requests.post("https://trade.top.one/history/",data=json.dumps(body),headers=headerdata)
 print res.text
-
-
-
-
-
