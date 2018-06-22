@@ -1,61 +1,60 @@
 # -*- coding: utf-8 -*-
 
-import httplib
+# -*- coding: utf-8 -*-
+
+import time
 import json
+import hashlib
+import requests
 
-token = "topapi:xxxxxxxxxxxxx" 
-host = 'https://trade.top.one/'
+appid  = 'xxxxxxxxxxxxxxxxxxxxxxxxxx'
+appkey = 'xxxxxxxxxxxxxxxxxxxxxxxxxx'
 
-conn = httplib.HTTPSConnection(host)
+headerdata = {"Content-type": "application/json"}
 
-url = '/'
-url_history = '/history/'
-headerdata = {"Content-type": "application/json"}  
+#get token
+random = 123456
+curtime = int(time.time())
+data = 'appkey='+appkey+'&random='+str(random)+'&time='+str(curtime)
+sha256 = hashlib.sha256()
+sha256.update(data.encode('utf-8'))
+signature = sha256.hexdigest()
+params = {'appid': appid, 'time': str(curtime), 'random': random, 'sig': signature}
+res=requests.get("https://server.top.one/api/apiToken",params=params)
+print res.text
 
+token = json.loads(res.text)['data']['apitoken']
 
 #balance
-print "balance:"
 body = {"method":"balance.query","params":[token],"id":0}
-conn.request('POST', url, json.dumps(body), headerdata)
-res = conn.getresponse().read() 
-print res
+res=requests.post("https://trade.top.one/",data=json.dumps(body),headers=headerdata)
+print res.text
 
 #current orders
-print "current orders:"
 body = {"method":"order.query", "params":[token, 0, 100],"id":0}
-conn.request('POST', url, json.dumps(body), headerdata)
-res = conn.getresponse().read() 
-print res
+res=requests.post("https://trade.top.one/",data=json.dumps(body),headers=headerdata)
+print res.text
 
 #put limit order
-print "put limit order:"
 body = {"method":"order.limit", "params":[token, "TOP/ETH", 2, "100", "0.0001", 1],"id":0}
-conn.request('POST', url, json.dumps(body), headerdata)
-res = conn.getresponse().read() 
-print res
+res=requests.post("https://trade.top.one/",data=json.dumps(body),headers=headerdata)
+print res.text
 
 #put market order
-print "put market order:"
 body = {"method":"order.market", "params":[token, "TOP/ETH", 2, "0.1", 1],"id":0}
-conn.request('POST', url, json.dumps(body), headerdata)
-res = conn.getresponse().read() 
-print res
+res=requests.post("https://trade.top.one/",data=json.dumps(body),headers=headerdata)
+print res.text
 
 #cancel order  
-order_id = 101  #need change!
-print "cancel order:"
+order_id = 101  #your order id , need change!
 body = {"method":"order.cancel", "params":[token, "TOP/ETH", order_id],"id":0}
-conn.request('POST', url, json.dumps(body), headerdata)
-res = conn.getresponse().read() 
-print res
+res=requests.post("https://trade.top.one/",data=json.dumps(body),headers=headerdata)
+print res.text
 
 #history orders
-print "history orders:"
 body = {"method":"order.history", "params":[token, "TOP/ETH", 0, 0, 0, 100],"id":0}
-conn.request('POST', url_history, json.dumps(body), headerdata)
-res = conn.getresponse().read() 
-print res
-
+res=requests.post("https://trade.top.one/history/",data=json.dumps(body),headers=headerdata)
+print res.text
 
 
 
