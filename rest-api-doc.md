@@ -14,7 +14,7 @@ URL: https://depth.top.one/
 
 body:
 
-    {"method": "depth.query", "params": ["TOP/ETH",10], "id": 0}        #查询挂单数据
+    {"method": "depth.query", "params": ["TOP/ETH",10], "id": 0}        #查询挂单数据（10：买卖各10个报价）
 
 Response示例：
 
