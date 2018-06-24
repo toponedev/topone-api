@@ -6,10 +6,15 @@ import random
 import hashlib
 import requests
 
+headerdata = {"Content-type": "application/json"}
+
+#get depth(orders)
+body = {"method":"depth.query","params":["TOP/ETH",10],"id":0}
+res=requests.post("https://depth.top.one/",data=json.dumps(body),headers=headerdata)
+print res.text
+
 appid  = 'xxxxxxxxxxxxxxxxxxxxxxxxxx'
 appkey = 'xxxxxxxxxxxxxxxxxxxxxxxxxx'
-
-headerdata = {"Content-type": "application/json"}
 
 #get token
 random = random.randint(100000,999999)
