@@ -6,11 +6,17 @@ TOP.ONE 交易接口说明
 
 # 请求交互
 
-REST访问的根URL：https://trade.top.one/
+## 行情API
+
+Post /
+URL: https://depth.top.one/
+body:
+
+    {"method": "depth.query", "params": ["TOP/ETH",10], "id": 0}        #查询挂单数据
+
+## 交易API
 
 token:帐号授权字符串, 详见 token-api-doc.md
-
-## API参考
 
 ### 1)查询余额
 
