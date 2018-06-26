@@ -9,7 +9,7 @@
 * You can revise it again once appkey lost.（如果丢失appkey，可通过在用户中心修改的方式，重新获取新的appkey。）
 * The token API endpoint is: [https://server.top.one](https://server.top.one)（接口地址为： [https://server.top.one](https://server.top.one)）
 * The effective time of token is 2 hours.（token有效时长是2小时，请定时获取新token进行下单请求。)
-* Interface frequency limit is 1 minute 1 translation.（该接口频率限制为1分钟1次。请勿频繁请求，否则将被屏蔽。）
+* Interface frequency limit is 1 minute 1 translation.（该接口频率限制为1分钟1次。请勿频繁请求，否则将被屏蔽一小时。）
 
 * GET /api/apiToken
 * Parameters:
@@ -43,7 +43,7 @@
 
 	| Error Code | Description |
 	| ---- |:----|
-	T0001 | The appId is not exists.查无此App id,请先申请或联系客服人员
+	T0001 | The appid is not exists.查无此appid,请先申请或联系客服人员
 	T0002 | Wrong random.请提交合法的随机数
 	T0003 | Exceed the time limit.请求已过期失效
 	T0004 | Time is wrong.请求时间戳不正确
