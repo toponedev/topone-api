@@ -201,7 +201,8 @@ URL: https://trade.top.one/
 
 body: 
 
-    {"method":"order.cancel", "params":["token", "TOP/ETH", 26211],"id":0}      #订单ID
+    {"method":"order.cancel", "params":["token", "TOP/ETH", 26211],"id":0}               #撤单，订单ID
+    {"method":"order.cancel", "params":["token", "TOP/ETH", 26211,262112,26213],"id":0}  #批量撤单
 
 Response示例:
 
