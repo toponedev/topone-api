@@ -17,13 +17,13 @@ appid  = 'xxxxxxxxxxxxxxxxxxxxxxxxxx'
 appkey = 'xxxxxxxxxxxxxxxxxxxxxxxxxx'
 
 #get token
-random = random.randint(100000,999999)
+num = random.randint(100000,999999)
 curtime = int(time.time())
-data = 'appkey='+appkey+'&random='+str(random)+'&time='+str(curtime)
+data = 'appkey='+appkey+'&random='+str(num)+'&time='+str(curtime)
 sha256 = hashlib.sha256()
 sha256.update(data.encode('utf-8'))
 signature = sha256.hexdigest()
-params = {'appid': appid, 'time': str(curtime), 'random': random, 'sig': signature}
+params = {'appid': appid, 'time': str(curtime), 'random': num, 'sig': signature}
 res=requests.get("https://server.top.one/api/apiToken",params=params)
 print res.text
 
