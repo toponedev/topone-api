@@ -40,12 +40,12 @@ res=requests.post("https://trade.top.one/",data=json.dumps(body),headers=headerd
 print res.text
 
 #put limit order
-body = {"method":"order.limit", "params":[token, "TOP/ETH", 2, "100", "0.0001", 1],"id":0}
+body = {"method":"order.limit", "params":[token, "TOP/ETH", 2, "100", "0.0001", 0],"id":0}  #买入 100TOP， 价格0.0001
 res=requests.post("https://trade.top.one/",data=json.dumps(body),headers=headerdata)
 print res.text
 
 #put market order
-body = {"method":"order.market", "params":[token, "TOP/ETH", 2, "0.1", 1],"id":0}
+body = {"method":"order.market", "params":[token, "TOP/ETH", 2, "0.1", 0],"id":0}   #买入，0.1ETH
 res=requests.post("https://trade.top.one/",data=json.dumps(body),headers=headerdata)
 print res.text
 
