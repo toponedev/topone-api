@@ -123,10 +123,10 @@ body:
       "params":[
         "token",      #Token
         "TOP/ETH",    #市场
-        2,            #买卖 1 卖  2 买
+        2,            #买卖 1 卖  2 买 (数值，不是字符串!)
         "1000",       #数量
         "0.00001057", #价格
-        0             #预留参数，无意义
+        0             #预留参数，无意义 (数值，不是字符串!)
       ],
       "id":0
     }
@@ -165,9 +165,9 @@ body:
         "params":[
             "token",      #Token
             "TOP/ETH",    #市场
-            2,            #买卖 1 卖  2 买
+            2,            #买卖 1 卖  2 买   (数值，不是字符串!)
             "0.1",        #数量 买入：ETH数量  卖出：TOP数量
-            0             #预留参数，无意义
+            0             #预留参数，无意义   (数值，不是字符串!)
         ],
         "id":0
     }
@@ -201,7 +201,7 @@ URL: https://trade.top.one/
 
 body: 
 
-    {"method":"order.cancel", "params":["token", "TOP/ETH", 26211],"id":0}               #撤单，订单ID
+    {"method":"order.cancel", "params":["token", "TOP/ETH", 26211],"id":0}               #撤单，订单ID (数值，不是字符串!)
     {"method":"order.cancel", "params":["token", "TOP/ETH", 26211,262112,26213],"id":0}  #批量撤单
 
 Response示例:
