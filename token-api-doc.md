@@ -7,7 +7,7 @@
 * Login in [TOP.ONE](https://top.one),visit the user center page,ask for your appid and appkey.It is recommended to bind a static IP when creating them to improving security.（登录[TOP.ONE](https://top.one)官网，访问用户中心，申请appid和appkey。建议创建时绑定固定IP，提高安全性。)
 * Appkey just show once,please keep it well preserved.（appkey只会在申请时显示，请复制并保存好。)
 * You can revise it again once appkey lost.（如果丢失appkey，可通过在用户中心修改的方式，重新获取新的appkey。）
-* The token API endpoint is: [https://server.top.one](https://server.top.one)（接口地址为： [https://server.top.one](https://server.top.one)）
+* The token API endpoint is: [https://server.top.one](https://server.top.one)（接口地址为： [https://server.top.one](https://server.top.one)）（大陆开发者可用： [https://newserver.topone.run](https://newserver.topone.run)）
 * The effective time of token is 2 hours.（token有效时长是2小时，请定时获取新token进行下单请求。)
 * Interface frequency limit is 1 minute 1 translation.（该接口频率限制为1分钟1次。请勿频繁请求，否则将被屏蔽一小时。）
 
