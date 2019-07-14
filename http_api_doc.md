@@ -39,7 +39,7 @@ token:帐号授权字符串, 详见 token-api-doc.md
 
 Post /
 
-URL: https://trade.top.one/
+URL: https://trade.top.one/ (中国大陆开发者：https://newtrade.topone.run/）
 
 body: 
 
