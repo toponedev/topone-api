@@ -10,7 +10,7 @@ TOP.ONE 交易接口说明
 
 Post /
 
-URL: https://depth.top.one/
+URL: https://depth.top.one/ （中国大陆：https://newdepth.topone.run）
 
 body:
 
