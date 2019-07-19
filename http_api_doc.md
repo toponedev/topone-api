@@ -68,7 +68,7 @@ Response示例：
 
 Post /
 
-URL: https://trade.top.one/ (中国大陆开发者：https://newtrade.topone.run/）
+URL: https://trade.top.one/
 
 body: 
 
