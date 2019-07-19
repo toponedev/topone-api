@@ -35,6 +35,35 @@ Response示例：
 
 token:帐号授权字符串, 详见 token-api-doc.md
 
+### 0)获取交易对列表
+
+Post /
+
+URL: https://trade.top.one/ (中国大陆开发者：https://newtrade.topone.run/ ）
+
+body: 
+
+    {"method":"market.list", "params":[],"id":0}
+
+Response示例：
+
+    {
+    "result": [
+        {
+            "min_amount": "0.01",
+            "name": "TOP/ETH",
+            "stock": "TOP",
+            "type": 1,
+            "money": "ETH",
+            "fee_prec": 4,
+            "stock_prec": 0,
+            "money_prec": 8
+        }
+      ], 
+      "error": null, 
+      "id": 0
+    }
+
 ### 1)查询余额
 
 Post /
